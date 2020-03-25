@@ -5,7 +5,7 @@ import Canvas2Image from "./canvas2image";
 
 const myHeading = document.querySelector(".title");
 myHeading.textContent = "Logo Builder";
-var sentences = ["Hello world", " How are you", "maybe"];
+var sentences = ["Made in", " Freedom", "Cocoa", "Chocolate","Worksite"];
 var sentenceList = document.querySelector("#sentences-id");
 
 for (var i = 0; i < sentences.length; i++) {
@@ -35,13 +35,10 @@ function drop(event) {
 
 $(function() {
   $("#btnSave").click(function() {
+    var canva = document.querySelector("#img-out");
+    var context = document.querySelector("canvas");
     html2canvas(document.querySelector("#logo-badge")).then(function(canvas) {
-     document.body.appendChild(canvas);
-      var canva = document.querySelector("canvas");
-      const context = canva.getContext('2d'); 
-      canva.id = "ids" +1 ;
-      console.log(canva.id);
-    
+     canva.appendChild(canvas);   
     });
   });
 });

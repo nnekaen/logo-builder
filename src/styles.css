@@ -13,13 +13,14 @@ body {
 .logo-badge {
   display: inline-block;
   background-color: white;
-  font-size: 30px !important;
-  line-height: 20px !important;
+  font-size: 35px !important;
+  font-weight:700;
+  line-height: 35px !important;
   margin: 5px;
   vertical-align: top;
   color: #333;
   padding: 10px;
-  margin: 25px;
+  margin-bottom: 25px;
   padding-bottom: 25px;
   border: 2px solid lightgray;
   page-break-after: always;
@@ -39,4 +40,14 @@ text-align: center;
   border: 1px solid black;
   padding: 20px;
   margin-top: 23px;
+}
+button{
+background:brown !important;
+border-width: 0ch;
+padding:12px;
+margin-top:10px;
+color:white;
+font-size:20px;
+border-radius: 40px;
+
 }
