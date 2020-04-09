@@ -1,1 +1,45 @@
-<!DOCTYPE html><html><head><title>Logo builder Sandbox</title><meta charset="UTF-8"><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><link rel="stylesheet" href="logo-builder/src.2ab8a382.css"></head><script>function t(t){t.preventDefault()}function e(t){t.preventDefault();var e=t.dataTransfer.getData("Text");t.target.appendChild(document.getElementById(e))}function a(t){t.dataTransfer.setData("Text",t.target.id)}</script><body> <div class="logo-header"> <img class="logo" width="25%" src="logo-builder/logo.b4de8a06.png"> </div> <div id="app"></div> <h1 class="title"></h1> <div class="container-fluid"> <div class="row"> <div class="col-md-4"> <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"> <div id="sentences-id" width="336" height="69"></div> </div> </div> <div class="col-md-4"> <div class="logo-container"> <div class="color-text"> <button type="button" class="brown" onclick="document.getElementById('logo-badge').style.color = 'red'"> Red </button> <button type="button" class="blue" onclick="document.getElementById('logo-badge').style.color = 'blue'"> Blue </button> <button type="button" class="black" onclick="document.getElementById('logo-badge').style.color = 'black'"> Black </button> </div> <div class="logo-badge" id="logo-badge" ondrop="drop(event)" ondragover="allowDrop(event)"> <img class="logo" width="20%" src="logo-builder/logo-r.04befce3.png"> </div> </div></div> <div class="col-lg-4"> <div class="logo-container"> <input type="button" class="btn-image" id="btnSave" value="Convert to Image" onclick="clear()"> <div id="img-out"></div> </div> </div> </div> </div> <script src="logo-builder/src.3ea85dc6.js"></script> </body></html>
+<!DOCTYPE html><html><head><title>Logo builder Sandbox</title><meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+  </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="logo-builder/src.2ab8a382.css">
+  </head>
+  <script>
+   function allowDrop(event) {
+      event.preventDefault();
+    }
+    function drop(event) {
+      event.preventDefault();
+      var data = event.dataTransfer.getData("Text");
+      event.target.appendChild(document.getElementById(data));
+    }
+    function drag(event) {
+      event.dataTransfer.setData("Text", event.target.id);
+    }
+  </script>
+  <body> 
+    <div class="logo-header"> <img class="logo" width="25%" src="/logo-builder/logo.b4de8a06.png"> 
+    </div> <div id="app"></div> <h1 class="title"></h1> <div class="container-fluid"> <div class="row"> 
+    <div class="col-md-4"> <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div id="sentences-id" width="336" height="69">
+      </div> 
+      </div> 
+    </div> 
+    <div class="col-md-4"> 
+    <div class="logo-container"> 
+      <div class="color-text"> 
+        <button type="button" class="brown" onclick="document.getElementById('logo-badge').style.color = 'red'"> Red </button> 
+        <button type="button" class="blue" onclick="document.getElementById('logo-badge').style.color = 'blue'"> Blue </button> 
+        <button type="button" class="black" onclick="document.getElementById('logo-badge').style.color = 'black'"> Black </button>
+      </div> 
+      <div class="logo-badge" id="logo-badge" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+        <img class="logo" width="20%" src="/logo-builder/logo-r.04befce3.png"> 
+      </div> </div></div> <div class="col-lg-4"> 
+    <div class="logo-container"> <input type="button" class="btn-image" id="btnSave" value="Convert to Image" onclick="clear()"> 
+      <div id="img-out"></div>
+    </div> 
+    </div> 
+    </div> 
+    </div> 
+  <script src="/logo-builder/src.3ea85dc6.js"></script> 
+  </body></html>
